@@ -1,2 +1,2 @@
-# Realtime-Private-Chat-Appp
+# Realtime-Private-Chat-App
 
