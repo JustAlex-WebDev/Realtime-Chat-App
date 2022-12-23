@@ -1,33 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#f2f2f2] w-full shadow-md fixed top-0 z-50">
-      <div className="main-div flex items-center justify-between h-20 font-bold text-[#161616]">
-        <Link to="/">
-          <h1 className="text-xl hover:opacity-50">Chatify</h1>
-        </Link>
-        <div className="hidden md:flex items-center">
-          <Link
-            to="/signin"
-            className="p-4 hover:opacity-50 duration-100 ease-in-out"
-          >
-            Sign In
-          </Link>
-          <Link
-            to="/signup"
-            className="bg-[#161616] text-[#fff] px-5 py-2 mx-2 rounded-2xl shadow-lg hover:opacity-50 duration-100 ease-in-out"
-          >
-            Sign Up
-          </Link>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className="block md:hidden cursor-pointer z-10 hover:opacity-50">
-          <AiOutlineMenu size={20} />
-        </div>
+    <div className="flex items-center h-[50px] p-2 justify-between border-b border-black">
+      <span className="font-bold text-[#161616]">Coffee Talks</span>
+      <div className="flex gap-2 items-center">
+        <img
+          src="https://images.pexels.com/photos/14769547/pexels-photo-14769547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+          className="w-6 h-6 rounded-full object-cover"
+        />
+        <span>John</span>
+        <button className="ml-2 p-2 px-4 text-sm bg-[#161616] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold">
+          Sign Out
+        </button>
       </div>
     </div>
   );
