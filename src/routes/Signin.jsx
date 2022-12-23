@@ -5,11 +5,11 @@ const Login = () => {
   return (
     <div className="bg-[#f2f2f2] h-[100vh] flex items-center">
       <div className="mx-auto px-12 py-12 bg-[#fff] rounded-2xl">
-        <div className="flex flex-col gap-8">
-          <span className="text-2xl font-bold text-[#161616] mx-auto">
-            Lama Chat
+        <div className="flex flex-col gap-4">
+          <span className="text-2xl font-bold text-[#161616] mx-auto w-full text-center">
+            Coffee Talks
           </span>
-          <span className="text-xl font-bold text-[#161616] mx-auto">
+          <span className="text-lg font-bold text-[#161616] mx-auto">
             Sign In
           </span>
         </div>
