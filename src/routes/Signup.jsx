@@ -1,5 +1,4 @@
 import React from "react";
-import Add from "../images/addAvatar.png";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
@@ -55,7 +54,7 @@ const Signup = () => {
             htmlFor="file"
             className="flex items-center gap-2 text-[#161616] text-base cursor-pointer my-4 justify-center"
           >
-            <img src={Add} alt="" className="w-9" />
+            <img src="images/addAvatar.png" alt="" className="w-9" />
             <span>Add an avatar</span>
           </label>
           <button className="w-full my-2 p-3 bg-[#161616] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold">

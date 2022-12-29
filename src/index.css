@@ -15,6 +15,7 @@
 }
 
 body {
+  scrollbar-width: thin;
   background-color: #f2f2f2;
 }
 
