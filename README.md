@@ -2,4 +2,4 @@
 
 ## About the app
 
-This realtime chat application will be styled with Tailwind CSS and it will also include Light/Dark Theme, Firebase Authentication, Routes from React-Router-Dom and a lot more. Users are going to be able to send real time messages to each other, and also style their profiles whatever they like.
+This realtime chat application is styled with Tailwind CSS and it also includes Light/Dark Theme, Firebase Authentication, Routes from React-Router-Dom and a lot more cool features. Furthermore, users are going to be able to send real time messages to each other, and also style their profiles whatever they like.
