@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className="md:w-[40%] w-full bg-[#fff] md:h-full h-[50%]">
       <Navbar />
       <Search />
-      <div className="overflow-y-scroll chats md:chats2">
+      <div className="overflow-y-scroll overflow-x-hidden chats md:chats2">
         <Chats />
       </div>
     </div>
