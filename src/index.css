@@ -27,6 +27,10 @@ body {
   height: calc(100% - 180px);
 }
 
+.navbar {
+  height: calc(100% - 54px);
+}
+
 .chats2 {
   height: calc(100% - 50px);
 }
