@@ -80,7 +80,7 @@ const Input = () => {
   };
 
   return (
-    <div className="h-[75px] bg-[#f2f2f2] p-2 flex items-center justify-between xlg:rounded-2xl">
+    <div className="h-[75px] bg-[#f2f2f2] p-2 flex items-center justify-between xlg:rounded-br-2xl">
       <input
         type="text"
         placeholder="Type something..."
