@@ -24,11 +24,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex items-center h-[50px] p-2 justify-between border-b border-black">
+    <div className="flex items-center h-[50px] p-2 justify-between border-b border-[#f2f2f2]">
       <Link to="/">
         <span className="font-bold text-[#161616]">Coffee Talks</span>
       </Link>
-      <div className="hidden md:flex gap-2 items-center">
+      <div className="flex gap-2 items-center">
         <Link to="/account">
           <img
             src={currentUser.photoURL}
@@ -37,7 +37,7 @@ const Navbar = () => {
             title="Account"
           />
         </Link>
-        {/* <span>{currentUser.displayName}</span> */}
+        <span>{currentUser.displayName}</span>
         <button
           onClick={() => signOut(auth)}
           className="ml-2 p-2 px-4 text-sm bg-[#161616] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold"
@@ -61,16 +61,16 @@ const Navbar = () => {
       </div> */}
 
       {/* Menu Icon */}
-      <button
+      {/* <button
         ref={navRef}
         onClick={() => setNav(!nav)}
         className="block md:hidden cursor-pointer z-10 hover:opacity-50"
       >
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-      </button>
+      </button> */}
 
       {/* Mobile Menu */}
-      <div
+      {/* <div
         className={
           nav
             ? "navbar md:hidden fixed right-0 top-[52px] flex flex-col items-center justify-between w-[50%] bg-[#fff] text-black shadow-xl z-50 text-lg"
@@ -103,7 +103,7 @@ const Navbar = () => {
             Sign Out
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
