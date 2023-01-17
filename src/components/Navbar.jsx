@@ -37,7 +37,7 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        <div className="font-bold text-xl">Chats</div>
+        <div className="font-bold text-2xl">Chats</div>
 
         {/* User's username and Sign Out button */}
         {/* <span>{currentUser.displayName}</span> */}

@@ -85,13 +85,10 @@ const Search = () => {
 
   return (
     <div>
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        className="relative p-2 focus-within:w-full"
-      >
+      <form onSubmit={(e) => e.preventDefault()} className="relative p-2">
         <input
           type="text"
-          className="relative w-8 h-8 rounded-full border bg-[#161616] border-white focus:w-full outline-none cursor-pointer focus:cursor-text pl-8 py-4"
+          className="w-0 h-8 rounded-full border bg-[#161616] border-white focus:w-52 outline-none cursor-pointer focus:cursor-text pl-8 py-4 transition-all"
           placeholder="Search a user"
           onKeyDown={handleKey}
           onChange={(e) => setUsername(e.target.value)}
