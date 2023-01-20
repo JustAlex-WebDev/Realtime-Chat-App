@@ -36,7 +36,7 @@ const Chats = () => {
         .map((chat) => (
           <div
             key={chat[0]}
-            className="p-2 flex items-center gap-2 cursor-pointer text-[#161616] hover:bg-[#f2f2f2]"
+            className="p-2 flex items-center gap-2 cursor-pointer hover:bg-[#161616] pl-6"
             onClick={() => handleSelect(chat[1].userInfo)}
           >
             <img
