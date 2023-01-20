@@ -22,6 +22,10 @@ body {
   height: 100vh;
 }
 
+.sidebar {
+  height: calc(100vh - 82px);
+}
+
 /* .messages {
   height: calc(100% - 125px);
 }
