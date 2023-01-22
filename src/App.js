@@ -5,6 +5,7 @@ import Signin from "./routes/Signin";
 import Home from "./routes/Home";
 import { AuthContext } from "./context/AuthContext";
 import { Navigate } from "react-router-dom";
+import Account from "./routes/Account";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -24,6 +25,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/account"
+          element={
+            <ProtectedRoute>
+              <Account />
             </ProtectedRoute>
           }
         />
