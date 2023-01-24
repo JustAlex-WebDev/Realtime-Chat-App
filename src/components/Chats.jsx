@@ -44,7 +44,7 @@ const Chats = () => {
               alt=""
               className="w-[50px] h-[50px] rounded-full object-cover"
             />
-            <div className="w-[100%]">
+            <div className="w-[50%]">
               <span className="font-semibold">
                 {chat[1].userInfo.displayName}
               </span>

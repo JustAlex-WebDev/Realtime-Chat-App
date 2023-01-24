@@ -12,6 +12,7 @@
   box-sizing: border-box;
   font-family: "Urbanist", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -22,8 +23,12 @@ body {
   height: 100vh;
 }
 
-.sidebar {
-  height: calc(100vh - 82px);
+.sidebarWithUser {
+  height: calc(100vh - 134px);
+}
+
+.sidebarWithoutUser {
+  height: calc(100vh - 67px);
 }
 
 /* .messages {

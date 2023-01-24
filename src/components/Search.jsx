@@ -14,9 +14,9 @@ import {
 import { db } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
 
-const Search = () => {
+const Search = ({ user, setUser }) => {
   const [username, setUsername] = useState("");
-  const [user, setUser] = useState(null);
+
   const [err, setErr] = useState(false);
 
   const { currentUser } = useContext(AuthContext);
@@ -85,21 +85,38 @@ const Search = () => {
 
   return (
     <div>
-      <form onSubmit={(e) => e.preventDefault()} className="relative p-2">
-        <input
-          type="text"
-          className="w-0 h-8 rounded-full border bg-[#161616] border-white focus:w-52 outline-none cursor-pointer focus:cursor-text pl-8 py-4 transition-all"
-          placeholder="Search a user"
-          onKeyDown={handleKey}
-          onChange={(e) => setUsername(e.target.value)}
-          value={username}
-          title="Search"
-        />
-        <AiOutlineSearch
-          size={20}
-          className="absolute inset-y-0 my-auto ml-[7px] pointer-events-none"
-        />
-      </form>
+      <div className="absolute top-2 right-4 ">
+        <form onSubmit={(e) => e.preventDefault()} className="relative p-2">
+          <input
+            type="text"
+            className="w-0 h-8 rounded-full border bg-[#161616] border-white focus:w-52 outline-none cursor-pointer focus:cursor-text pl-8 py-4 transition-all"
+            placeholder="Search a user"
+            onKeyDown={handleKey}
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
+            title="Search"
+          />
+          <AiOutlineSearch
+            size={20}
+            className="absolute inset-y-0 my-auto ml-[7px] pointer-events-none"
+          />
+        </form>
+      </div>
+      {user ? (
+        <div
+          onClick={handleSelect}
+          className="border-[#202020] border-b p-2 pl-6 flex items-center gap-2 cursor-pointer hover:bg-[#161616]"
+        >
+          <img
+            src={user.photoURL}
+            alt=""
+            className="w-[50px] h-[50px] rounded-full object-cover"
+          />
+          <div>
+            <span className="font-semibold">{user.displayName}</span>
+          </div>
+        </div>
+      ) : null}
     </div>
 
     //  The prevous search bar
@@ -127,21 +144,21 @@ const Search = () => {
     //     </form>
     //   </div>
 
-    //   {user ? (
-    //     <div
-    //       onClick={handleSelect}
-    //       className="p-2 flex items-center gap-2 cursor-pointer text-[#161616] hover:bg-[#f2f2f2]"
-    //     >
-    //       <img
-    //         src={user.photoURL}
-    //         alt=""
-    //         className="w-[50px] h-[50px] rounded-full object-cover"
-    //       />
-    //       <div>
-    //         <span className="font-semibold">{user.displayName}</span>
-    //       </div>
+    // {user ? (
+    //   <div
+    //     onClick={handleSelect}
+    //     className="p-2 flex items-center gap-2 cursor-pointer text-[#161616] hover:bg-[#f2f2f2]"
+    //   >
+    // <img
+    //   src={user.photoURL}
+    //   alt=""
+    //   className="w-[50px] h-[50px] rounded-full object-cover"
+    // />
+    //     <div>
+    //       <span className="font-semibold">{user.displayName}</span>
     //     </div>
-    //   ) : null}
+    //   </div>
+    // ) : null}
     // </div>
   );
 };
