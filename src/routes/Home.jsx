@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Chat from "../components/Chat";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { motion as m } from "framer-motion";
 
-const Home = () => {
+const Home = ({ chats, setChats }) => {
   const [user, setUser] = useState(null);
 
   return (
@@ -22,9 +21,8 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
         >
-          <Sidebar user={user} />
+          <Sidebar user={user} chats={chats} setChats={setChats} />
         </m.div>
-        {/* <Chat /> */}
       </div>
     </m.div>
   );

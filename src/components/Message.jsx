@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import moment from "moment";
+import { motion as m } from "framer-motion";
 
 const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext);
@@ -14,12 +15,15 @@ const Message = ({ message }) => {
   }, [message]);
 
   return (
-    <div
+    <m.div
       ref={ref}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
       className={`${
         message.senderId === currentUser.uid
           ? "flex gap-4 flex-row-reverse mb-1 mt-4"
-          : "flex gap-4 mt-4"
+          : "flex gap-4 mt-4 mb-1"
       }`}
     >
       <div className="flex flex-col mb-4">
@@ -30,31 +34,31 @@ const Message = ({ message }) => {
               : data.user.photoURL
           }
           alt=""
-          className="w-8 h-8 rounded-full object-cover"
+          className="w-8 h-8 rounded-full object-cover border-white border"
         />
-        <span className="opacity-50">
-          {moment(message.date.toDate()).format("LT")}
-        </span>
       </div>
       <div
         className={`${
           message.senderId === currentUser.uid
             ? "max-w-[80%] flex flex-col gap-2 items-end"
-            : "max-w-[80%] flex flex-col"
+            : "max-w-[80%] flex flex-col gap-2"
         }`}
       >
         <p
           className={`${
             message.senderId === currentUser.uid
-              ? "bg-[#161616] text-left text-[#fff] py-2 px-4 rounded-2xl rounded-tr-none max-w-[100%] overflow-x-hidden"
-              : "bg-[#f2f2f2] text-left py-2 px-4 rounded-2xl rounded-tl-none max-w-[100%] overflow-x-hidden"
+              ? "bg-black text-white border-white border text-left py-2 px-4 rounded-2xl rounded-tr-none max-w-[100%] overflow-x-hidden"
+              : "bg-[#161616] text-left text-white border-[#686767] border py-2 px-4 rounded-2xl rounded-tl-none max-w-[100%] overflow-x-hidden"
           }`}
         >
           {message.text}
         </p>
+        <span className="opacity-50">
+          {moment(message.date.toDate()).format("LT")}
+        </span>
         {message.img && <img src={message.img} alt="" className="w-[50%]" />}
       </div>
-    </div>
+    </m.div>
   );
 };
 
