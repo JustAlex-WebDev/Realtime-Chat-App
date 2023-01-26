@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import Signup from "../routes/Signup";
 import Signin from "../routes/Signin";
@@ -6,10 +6,12 @@ import Home from "../routes/Home";
 import Account from "../routes/Account";
 import { AuthContext } from "../context/AuthContext";
 import { AnimatePresence } from "framer-motion";
+import Chat from "../routes/Chat";
 
 const AnimatedRoutes = () => {
   const { currentUser } = useContext(AuthContext);
   const location = useLocation();
+  const [chats, setChats] = useState([]);
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
@@ -25,7 +27,15 @@ const AnimatedRoutes = () => {
           path="/"
           element={
             <ProtectedRoute>
-              <Home />
+              <Home chats={chats} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/chat"
+          element={
+            <ProtectedRoute>
+              <Chat />
             </ProtectedRoute>
           }
         />

@@ -14,6 +14,7 @@ import {
 import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import { motion as m } from "framer-motion";
 
 const Input = () => {
   const [text, setText] = useState("");
@@ -80,17 +81,22 @@ const Input = () => {
   };
 
   return (
-    <div className="h-[75px] bg-[#f2f2f2] p-2 flex items-center justify-between xlg:rounded-br-2xl">
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+      className="h-[75px] bg-[#161616] px-8 flex items-center justify-between xlg:rounded-br-2xl"
+    >
       <input
         type="text"
         placeholder="Type something..."
-        className="w-[50%] p-2 border rounded-2xl bg-[#fff] text-[#161616]"
+        className="w-[50%] p-2 border rounded-2xl bg-[#fff] text-[#161616] outline-none"
         onChange={(e) => setText(e.target.value)}
         onKeyDown={handleKey}
         value={text}
       />
       <div className="flex items-center gap-4">
-        <IoMdAttach size={18} className="cursor-pointer" />
+        <IoMdAttach size={18} className="cursor-pointer hover:opacity-50" />
         <input
           type="file"
           style={{ display: "none" }}
@@ -98,16 +104,19 @@ const Input = () => {
           onChange={(e) => setImg(e.target.files[0])}
         />
         <label htmlFor="file">
-          <AiOutlineFileImage size={18} className="cursor-pointer" />
+          <AiOutlineFileImage
+            size={18}
+            className="cursor-pointer hover:opacity-50"
+          />
         </label>
         <button
           onClick={handleSend}
-          className="p-2 px-4 text-sm bg-[#161616] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold"
+          className="p-2 px-4 text-sm bg-[#000000] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold"
         >
           Send
         </button>
       </div>
-    </div>
+    </m.div>
   );
 };
 

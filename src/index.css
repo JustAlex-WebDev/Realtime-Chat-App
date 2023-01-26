@@ -31,11 +31,11 @@ body {
   height: calc(100vh - 67px);
 }
 
-/* .messages {
-  height: calc(100% - 125px);
+.messages {
+  height: calc(100vh - 157px);
 }
 
-.chats {
+/*.chats {
   height: calc(100% - 180px);
 }
 
