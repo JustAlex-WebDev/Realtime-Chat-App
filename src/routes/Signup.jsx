@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BiImageAdd } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
@@ -51,40 +52,47 @@ const Signup = () => {
   };
 
   return (
-    <div className="bg-[#f2f2f2] h-[100vh] flex items-center">
-      <div className="mx-auto px-12 py-12 bg-[#fff] rounded-2xl">
+    <div className="bg-[#202020] h-[100vh] flex items-center">
+      <div className="mx-auto px-12 py-12 bg-[#161616] rounded-2xl">
         <div className="flex flex-col gap-4">
-          <span className="text-2xl font-bold text-[#161616] mx-auto">
+          <span className="text-2xl font-bold text-[#fff] mx-auto">
             Coffee Talks
           </span>
-          <span className="text-lg font-bold text-[#161616] mx-auto">
-            Sign Up
-          </span>
+          <span className="text-lg font-bold text-[#fff] mx-auto">Sign Up</span>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="my-4">
-            <label className="text-[#161616]">Username</label>
+            <label for="username" className="text-[#fff]">
+              Username
+            </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
               <input
-                className="w-full p-2 border rounded-2xl bg-[#fff] text-[#161616]"
+                id="username"
+                className="w-full p-2 border rounded-2xl bg-[#161616] text-[#fff] outline-none"
                 type="text"
               />
             </div>
           </div>
           <div className="my-4">
-            <label className="text-[#161616]">Email</label>
+            <label for="email" className="text-[#fff]">
+              Email
+            </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
               <input
-                className="w-full p-2 border rounded-2xl bg-[#fff] text-[#161616]"
+                id="email"
+                className="w-full p-2 border rounded-2xl bg-[#161616] text-[#fff] outline-none"
                 type="email"
               />
             </div>
           </div>
           <div className="my-4">
-            <label className="text-[#161616]">Password</label>
+            <label for="password" className="text-[#fff]">
+              Password
+            </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
               <input
-                className="w-full p-2 border rounded-2xl bg-[#fff] text-[#161616]"
+                id="email"
+                className="w-full p-2 border rounded-2xl bg-[#161616] text-[#fff] outline-none"
                 type="password"
               />
             </div>
@@ -92,7 +100,7 @@ const Signup = () => {
           <div className="my-4">
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
               <input
-                className="w-full p-2 border rounded-2xl bg-[#fff] text-[#161616] hidden"
+                className="w-full p-2 border rounded-2xl bg-[#161616] text-[#fff] hidden"
                 type="file"
                 id="file"
               />
@@ -100,16 +108,16 @@ const Signup = () => {
           </div>
           <label
             htmlFor="file"
-            className="flex items-center gap-2 text-[#161616] text-base cursor-pointer my-4 justify-center"
+            className="flex items-center gap-2 text-[#fff] text-base cursor-pointer mb-4 justify-center"
           >
-            <img src="images/addAvatar.png" alt="" className="w-9" />
+            <BiImageAdd size={25} />
             <span>Add an avatar</span>
           </label>
-          <button className="w-full my-2 p-3 bg-[#161616] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold">
+          <button className="w-full my-2 p-3 bg-[#fff] text-[#161616] hover:opacity-50 rounded-2xl shadow-xl font-bold">
             Sign Up
           </button>
         </form>
-        <p className="mt-4 text-center text-[#161616]">
+        <p className="mt-4 text-center text-[#fff]">
           Already have an account?<span> </span>
           <Link className="hover:opacity-50 font-bold" to="/signin">
             Sign In
