@@ -52,7 +52,7 @@ const Account = () => {
             <img
               src={currentUser.photoURL}
               alt=""
-              className="w-28 h-auto rounded-full object-cover"
+              className="w-28 h-28 rounded-full object-cover"
             />
           </m.div>
           <m.span

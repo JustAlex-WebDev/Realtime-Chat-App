@@ -52,7 +52,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="bg-[#202020] h-[100vh] flex items-center">
+    <div className="bg-[#000000] h-[100vh] flex items-center">
       <div className="mx-auto px-12 py-12 bg-[#161616] rounded-2xl">
         <div className="flex flex-col gap-4">
           <span className="text-2xl font-bold text-[#fff] mx-auto">
@@ -62,7 +62,7 @@ const Signup = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="my-4">
-            <label for="username" className="text-[#fff]">
+            <label htmlFor="username" className="text-[#fff]">
               Username
             </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
@@ -74,7 +74,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="my-4">
-            <label for="email" className="text-[#fff]">
+            <label htmlFor="email" className="text-[#fff]">
               Email
             </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
@@ -86,18 +86,18 @@ const Signup = () => {
             </div>
           </div>
           <div className="my-4">
-            <label for="password" className="text-[#fff]">
+            <label htmlFor="password" className="text-[#fff]">
               Password
             </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
               <input
-                id="email"
+                id="password"
                 className="w-full p-2 border rounded-2xl bg-[#161616] text-[#fff] outline-none"
                 type="password"
               />
             </div>
           </div>
-          <div className="my-4">
+          <div className="">
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
               <input
                 className="w-full p-2 border rounded-2xl bg-[#161616] text-[#fff] hidden"
@@ -108,7 +108,7 @@ const Signup = () => {
           </div>
           <label
             htmlFor="file"
-            className="flex items-center gap-2 text-[#fff] text-base cursor-pointer mb-4 justify-center"
+            className="flex items-center gap-2 text-[#fff] text-base cursor-pointer mb-8 justify-center"
           >
             <BiImageAdd size={25} />
             <span>Add an avatar</span>

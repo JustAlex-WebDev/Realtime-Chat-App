@@ -21,7 +21,7 @@ const Navbar = ({ user, setUser }) => {
               <img
                 src={currentUser.photoURL}
                 alt=""
-                className="w-8 h-auto rounded-full object-cover"
+                className="w-8 h-8 rounded-full object-cover"
                 title="Account"
               />
             </div>
