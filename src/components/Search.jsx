@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
+import { RiUserSearchLine } from "react-icons/ri";
 import {
   collection,
   query,
@@ -90,13 +90,13 @@ const Search = ({ user, setUser }) => {
           <input
             type="text"
             className="w-0 h-8 rounded-full border bg-[#161616] border-white focus:w-52 outline-none cursor-pointer focus:cursor-text pl-8 py-4 transition-all"
-            placeholder="Search a user"
+            placeholder="Add a user"
             onKeyDown={handleKey}
             onChange={(e) => setUsername(e.target.value)}
             value={username}
-            title="Search"
+            title="Add a user"
           />
-          <AiOutlineSearch
+          <RiUserSearchLine
             size={20}
             className="absolute inset-y-0 my-auto ml-[7px] pointer-events-none"
           />

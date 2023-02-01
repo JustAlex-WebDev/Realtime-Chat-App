@@ -21,7 +21,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#202020] h-[100vh] flex items-center">
+    <div className="bg-[#000000] h-[100vh] flex items-center">
       <div className="mx-auto px-12 py-12 bg-[#161616] rounded-2xl">
         <div className="flex flex-col gap-4">
           <span className="text-2xl font-bold text-[#fff] mx-auto w-full text-center">
@@ -31,7 +31,7 @@ const Login = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="my-4">
-            <label for="email" className="text-[#fff]">
+            <label htmlFor="email" className="text-[#fff]">
               Email
             </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
@@ -43,7 +43,7 @@ const Login = () => {
             </div>
           </div>
           <div className="my-4">
-            <label for="password" className="text-[#fff]">
+            <label htmlFor="password" className="text-[#fff]">
               Password
             </label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
@@ -54,7 +54,7 @@ const Login = () => {
               />
             </div>
           </div>
-          <button className="w-full my-2 p-3 bg-[#161616] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold border border-[#161616]">
+          <button className="w-full my-2 p-3 bg-[#161616] text-white hover:opacity-50 rounded-2xl shadow-xl font-bold border border-[#161616]">
             Sign In
           </button>
         </form>
