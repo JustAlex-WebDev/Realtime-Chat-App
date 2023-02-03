@@ -34,7 +34,7 @@ const Message = ({ message }) => {
               : data.user.photoURL
           }
           alt=""
-          className="w-8 h-8 rounded-full object-cover border-white border"
+          className="w-8 h-8 rounded-full object-cover border-primary border"
         />
       </div>
       <div
@@ -47,8 +47,8 @@ const Message = ({ message }) => {
         <p
           className={`${
             message.senderId === currentUser.uid
-              ? "bg-black text-white border-white border text-left py-2 px-4 rounded-2xl rounded-tr-none max-w-[100%] overflow-x-hidden"
-              : "bg-[#161616] text-left text-white border-[#686767] border py-2 px-4 rounded-2xl rounded-tl-none max-w-[100%] overflow-x-hidden"
+              ? "bg-msg text-msg border-msg border text-left py-2 px-4 rounded-2xl rounded-tr-none max-w-[100%] overflow-x-hidden"
+              : "bg-primary text-left text-primary border-primary border py-2 px-4 rounded-2xl rounded-tl-none max-w-[100%] overflow-x-hidden"
           }`}
         >
           {message.text}

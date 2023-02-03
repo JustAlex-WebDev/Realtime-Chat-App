@@ -17,7 +17,7 @@ const Chat = () => {
       transition={{ duration: 0.75, ease: "easeOut" }}
       exit={{ x: "100%", opacity: 1 }}
     >
-      <div className="w-full bg-[#161616] border-[#202020] border-b flex items-center justify-between p-4 px-6 h-[82px]">
+      <div className="w-full bg-primary border-primary border-b flex items-center justify-between p-4 px-6 h-[82px]">
         <div className="flex gap-4 items-center">
           <m.div
             initial={{ opacity: 0 }}
@@ -34,13 +34,12 @@ const Chat = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-            className="flex justify-center items-center p-[1px] bg-[#fff] rounded-full hover:opacity-50 hover:cursor-pointer"
+            className="flex justify-center items-center p-[1px] bg-button rounded-full hover:opacity-50 hover:cursor-pointer"
           >
             <img
               src={data.user?.photoURL}
               alt=""
               className="w-8 h-8 rounded-full object-cover"
-              title="Account"
             />
           </m.div>
           <m.span

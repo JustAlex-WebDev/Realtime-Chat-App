@@ -89,7 +89,7 @@ const Search = ({ user, setUser }) => {
         <form onSubmit={(e) => e.preventDefault()} className="relative p-2">
           <input
             type="text"
-            className="w-0 h-8 rounded-full border bg-[#161616] border-white focus:w-52 outline-none cursor-pointer focus:cursor-text pl-8 py-4 transition-all"
+            className="w-0 h-8 rounded-full border bg-primary border-primary focus:w-52 outline-none cursor-pointer focus:cursor-text pl-8 py-4 transition-all"
             placeholder="Add a user"
             onKeyDown={handleKey}
             onChange={(e) => setUsername(e.target.value)}
@@ -105,7 +105,7 @@ const Search = ({ user, setUser }) => {
       {user ? (
         <div
           onClick={handleSelect}
-          className="border-[#202020] border-b p-2 pl-6 flex items-center gap-2 cursor-pointer hover:bg-[#161616]"
+          className="border-primary border-b p-2 pl-6 flex items-center gap-2 cursor-pointer hover:bg-secondary"
         >
           <img
             src={user.photoURL}

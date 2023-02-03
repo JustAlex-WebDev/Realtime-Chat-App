@@ -85,12 +85,12 @@ const Input = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-      className="h-[75px] bg-[#161616] px-8 flex items-center justify-between xlg:rounded-br-2xl"
+      className="h-[75px] bg-secondary px-8 flex items-center justify-between xlg:rounded-br-2xl"
     >
       <input
         type="text"
         placeholder="Type something..."
-        className="w-[50%] p-2 border rounded-2xl bg-[#fff] text-[#161616] outline-none"
+        className="w-[50%] p-2 border rounded-2xl bg-primary text-primary outline-none"
         onChange={(e) => setText(e.target.value)}
         onKeyDown={handleKey}
         value={text}
@@ -111,7 +111,7 @@ const Input = () => {
         </label>
         <button
           onClick={handleSend}
-          className="p-2 px-4 text-sm bg-[#000000] text-[#fff] hover:opacity-50 rounded-2xl shadow-xl font-bold"
+          className="p-2 px-4 text-sm bg-button text-button hover:opacity-50 rounded-2xl shadow-xl font-bold"
         >
           Send
         </button>

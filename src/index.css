@@ -6,6 +6,30 @@
   @apply w-full max-w-[1140px] mx-auto;
 }
 
+.dark {
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #161616;
+  --color-bg-msg: #fff;
+  --color-bg-button: #fff;
+  --color-text-primary: #fff;
+  --color-text-msg: #000000;
+  --color-text-button: #161616;
+  --color-border-primary: #fff;
+  --color-border-msg: #000000;
+}
+
+.light {
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #f2f2f2;
+  --color-bg-msg: #000000;
+  --color-bg-button: #1a1717;
+  --color-text-primary: #000000;
+  --color-text-msg: #fff;
+  --color-text-button: #fff;
+  --color-border-primary: #000000;
+  --color-border-msg: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,8 +41,8 @@
 
 body {
   scrollbar-width: thin;
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
   width: 100%;
   height: 100vh;
 }
@@ -34,15 +58,3 @@ body {
 .messages {
   height: calc(100vh - 157px);
 }
-
-/*.chats {
-  height: calc(100% - 180px);
-}
-
-.navbar {
-  height: calc(100% - 54px);
-}
-
-.chats2 {
-  height: calc(100% - 50px);
-} */
