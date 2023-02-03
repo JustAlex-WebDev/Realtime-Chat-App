@@ -6,6 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { motion as m } from "framer-motion";
+import ThemeToggle from "../components/ThemeToggle";
 
 const Account = () => {
   const { currentUser } = useContext(AuthContext);
@@ -18,7 +19,7 @@ const Account = () => {
       exit={{ x: "100%", opacity: 1 }}
       className="main-div"
     >
-      <div className="w-full bg-[#161616] border-[#202020] border-b flex items-center justify-between p-4 px-6 h-[82px]">
+      <div className="w-full bg-primary border-primary border-b flex items-center justify-between p-4 px-6 h-[82px]">
         <div className="flex gap-4 items-center">
           <m.div
             initial={{ opacity: 0 }}
@@ -47,7 +48,7 @@ const Account = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-            className="flex justify-center items-center p-[3px] bg-[#fff] rounded-full"
+            className="flex justify-center items-center p-[3px] bg-msg rounded-full"
           >
             <img
               src={currentUser.photoURL}
@@ -71,9 +72,8 @@ const Account = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}
           >
-            <div className="flex items-center cursor-pointer hover:opacity-50 font-semibold p-2">
-              <HiMoon className="text-xl mr-2 mb-1" />
-              <span>Dark Mode</span>
+            <div className="flex items-center cursor-pointer font-semibold p-2">
+              <ThemeToggle className="hover:opacity-50" />
             </div>
           </m.div>
           <m.div
@@ -83,7 +83,7 @@ const Account = () => {
           >
             <button
               onClick={() => signOut(auth)}
-              className="bg-[#161616] font-bold px-5 py-2 mx-2 rounded-2xl shadow-lg hover:opacity-50 transition-all"
+              className="bg-button text-button font-bold px-5 py-2 mx-2 rounded-2xl shadow-lg hover:opacity-50 transition-all"
             >
               Sign Out
             </button>

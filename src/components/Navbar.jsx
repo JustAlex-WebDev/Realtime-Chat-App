@@ -9,7 +9,7 @@ const Navbar = ({ user, setUser }) => {
 
   return (
     <div>
-      <div className="w-full bg-[#161616] border-[#202020] border-b flex items-center justify-between p-4 px-6">
+      <div className="w-full bg-secondary border-primary border-b flex items-center justify-between p-4 px-6">
         <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -17,7 +17,7 @@ const Navbar = ({ user, setUser }) => {
           className="flex gap-4 items-center"
         >
           <Link to="/account">
-            <div className="flex justify-center items-center p-[1px] bg-[#fff] rounded-full hover:opacity-50 hover:cursor-pointer">
+            <div className="flex justify-center items-center p-[1px] bg-button rounded-full hover:opacity-50 hover:cursor-pointer">
               <img
                 src={currentUser.photoURL}
                 alt=""
